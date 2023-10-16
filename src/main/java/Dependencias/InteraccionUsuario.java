@@ -12,24 +12,17 @@ public class InteraccionUsuario {
 
         System.out.println("Elige tu vehículo (1 para Auto, 2 para Motocicleta, 3 para Bicicleta):");
         int opcionVehiculo = scanner.nextInt();
-        Vehiculo vehiculoElegido;
+        Vehiculo vehiculoElegido = switch (opcionVehiculo) {
+            case 1 -> new Vehiculo("Auto", 5.0);
+            case 2 -> new Vehiculo("Motocicleta", 3.0);
+            case 3 -> new Vehiculo("Bicicleta", 2.0);
+            default -> {
+                System.out.println("Opción de vehículo no válida, se utilizará un Auto por defecto.");
+                yield new Vehiculo("Auto", 5.0);
+            }
+        };
 
         // los valores otorgados en la velocidad a los vehiculos son meras aproximaciones.
-        switch (opcionVehiculo) {
-            case 1:
-                vehiculoElegido = new Vehiculo("Auto", 5.0);
-                break;
-            case 2:
-                vehiculoElegido = new Vehiculo("Motocicleta", 3.0);
-                break;
-            case 3:
-                vehiculoElegido = new Vehiculo("Bicicleta", 2.0);
-                break;
-            default:
-                System.out.println("Opción de vehículo no válida, se utilizará un Auto por defecto.");
-                vehiculoElegido = new Vehiculo("Auto", 5.0);
-                break;
-        }
 
         // solicitar el nombre del destino y la distancia en kilómetros
         scanner.nextLine();
