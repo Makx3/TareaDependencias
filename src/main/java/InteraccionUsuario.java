@@ -38,6 +38,6 @@ public class InteraccionUsuario {
 
     // elegir vehiculo y calcula el tiempo del viaje
         persona.elegirVehiculo(vehiculoElegido);
-    String mensaje = persona.viajarA(destino, distanciaKilometros);
+    String mensaje = persona.viajarAlDestino(destino, distanciaKilometros);
         System.out.println(mensaje);
 }
