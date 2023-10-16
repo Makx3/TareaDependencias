@@ -29,4 +29,15 @@ public class InteraccionUsuario {
                 break;
         }
     }
+    // solicita el nombre del destino y la distancia en kilometros
+        scanner.nextLine();
+        System.out.print("Ingrese el destino: ");
+    String destino = scanner.nextLine();
+        System.out.print("Ingrese la distancia en kilometros: ");
+    double distanciaKilometros = scanner.nextDouble();
+
+    // elegir vehiculo y calcula el tiempo del viaje
+        persona.elegirVehiculo(vehiculoElegido);
+    String mensaje = persona.viajarA(destino, distanciaKilometros);
+        System.out.println(mensaje);
 }
