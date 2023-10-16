@@ -1,7 +1,7 @@
 package Dependencias;
 
 public class Persona {
-    private String nombre;
+    private final String nombre;
     private Vehiculo vehiculo;
 
     public Persona(String nombre) {
@@ -19,6 +19,14 @@ public class Persona {
         } else {
             return "Eliga un vehiculo antes de viajar.";
         }
+    }
+
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
     }
 }
 
