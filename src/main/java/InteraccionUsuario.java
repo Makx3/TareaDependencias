@@ -12,7 +12,7 @@ public class InteraccionUsuario {
         int opcionVehiculo = scanner.nextInt();
         Vehiculo vehiculoElegido;
 
-        // los valores otorgados a los vehiculos son meras aproximaciones.
+        // los valores otorgados en la velocidad a los vehiculos son meras aproximaciones.
         switch (opcionVehiculo) {
             case 1:
                 vehiculoElegido = new Vehiculo("Auto", 5.0);
