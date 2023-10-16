@@ -1,8 +1,8 @@
 package Dependencias;
 
 public class Vehiculo {
-    private String nombre;
-    private double velocidadPromedio;
+    private final String nombre;
+    private final double velocidadPromedio;
 
     // en este caso velocidad promedio es los minutos que se demora el vehiculo en recorrer 1Km de distancia
 
